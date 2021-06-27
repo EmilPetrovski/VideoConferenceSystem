@@ -1,5 +1,5 @@
 # VideoConferenceSystem
-Software requirements analysis group project
+Software Requirements Analysis group project
 
 -------------
 
