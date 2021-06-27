@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Video Conference System-SRS: Software Requirements Specification</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+    /* Customization of standard HTML styles */
+    p {
+      margin-top: 0em;
+      margin-bottom: 0.5em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0em;
+      margin-bottom: 0.25em;
+    }
+    table {
+      border-spacing: 1em;
+    }
+    th, td {
+      text-align: left;
+    }
+
+    /* Customization of ReqView styles */
+    .heading {
+      margin: 1em;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .filter {
+      text-align: right;
+      margin: 1em;
+    }
+    .reqviewTable {
+      margin: 1em;
+    }
+    .reqviewTable h1 {
+      font-size: 30px;
+    }
+    .reqviewTable h2 {
+      font-size: 24px;
+    }
+    .reqviewTable h3 {
+      font-size: 20px;
+    }
+    .reqviewTable h4 {
+      font-size: 18px;
+    }
+    .reqviewTable h5 {
+      font-size: 16px;
+    }
+    .reqviewTable h6 {
+      font-size: 14px;
+    }
+    /* Customization of our styles */
+    .id-col {
+      min-width: 5em;
+      vertical-align: top;
+    }
+    .description-col {
+      min-width: 30em;
+      vertical-align: top;
+    }
+    .discussion-col {
+      min-width: 15em;
+      vertical-align: top;
+    }
+    .links-col {
+      min-width: 15em;
+      vertical-align: top;
+    }
+    .attributes-col {
+      min-width: 15em;
+      vertical-align: top;
+    }
+    .attributes-col ul {
+      padding-left: 0px;
+    }
+    .attributes-col li {
+      list-style: none outside none;
+    }
+    .attributes-col .attribute-name {
+      font-style: italic;
+    }
+    .custom-col {
+      min-width: 10em;
+      vertical-align: top;
+    }
+    .comment-text {
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+    .attachment {
+      font-style: italic;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    .links-type-name {
+      font-style: italic;
+    }
+    .link {
+      margin-left: 16px;
+    }
+    td.attributes-col div.htmlContent,
+    td.custom-col div.htmlContent {
+      min-width: 15em;
+    }
+    .deleted {
+      color: #666;
+    }
+    .deleted .id-col,
+    .deleted .description-col,
+    .link.deleted {
+      text-decoration: line-through;
+    }
+    .deleted a {
+      color: gray;
+    }
+    .htmlContent table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: auto;
+    }
+    .htmlContent th, .htmlContent td {
+      border: 1px solid #b5bcc7;
+      vertical-align: top;
+      padding: 3px 7px 2px 7px;
+    }
+    .htmlContent th {
+      padding-top: 5px;
+      padding-bottom: 4px;
+      background: silver;
+    }
+    /** Override Bootstrap print */
+    @media print {
+      a[href]:after {
+        content: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">
+    <h1 class="display-4">Video Conference System-SRS: Software Requirements Specification</h1>
+  </div>
+  <div class="reqviewTable table-responsive-md">
+    <table class="table">
+      <!-- Heading of the requirements table -->
+      <thead>
+        <tr>
+          <th class="id-col"><i class="fas fas fa-asterisk"></i> ID</th>
+          <th class="custom-col"><i class="fas fa-cog"></i> Type</th>
+          <th class="description-col"><i class="fas fa-align-left"></i> Description</th>
+          <th class="custom-col"><i class="fas fa-cog"></i> Source</th>
+          <th class="custom-col"><i class="fas fa-cog"></i> Rationale</th>
+          <th class="custom-col"><i class="fas fa-cog"></i> Priority</th>
+          <th class="custom-col"><i class="fas fa-cog"></i> Status</th>
+          <th class="custom-col"><i class="fas fa-cog"></i> Ver. Method</th>
+        </tr>
+      </thead>
+
+      <!-- Requirements table with list of requirements -->
+      <tbody>
+        <tr>
+          <td class="id-col"><a id="SRS-1"></a>SRS-1</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:10px">
+            <h1>1 Introduction</h1>
+            <div class="htmlContent"><p><em>The goal of this document is to define detailed explanation of all the required functionalities, characteristics, needs and goals of the project: Video-conference system. Video-conference system will be web-based online platform which has the purpose of enabling the educational process of educational institutions be better and more efficient, creating new opportunities for the system</em>.</p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-2"></a>SRS-2</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>1.1 Purpose</h2>
+            <div class="htmlContent"><p>The purpose of this Systems Requirements Specifications document (henceforth referred to as SRS) is to provide the guidelines necessary to design and implement software that fulfills all the requirements given. In the case of the VCS (Video Conference System), this document will contain enough information so that in the event that the current team is not able to complete the software, a future team can use this document and only this document to create another version of the software that still fulfills all the requirements. This SRS will be entirely design-independent, focusing only the end requirements that the final software must achieve.</p><p></p><p>This SRS will be used by the software engineers constructing the VCS and the video conference end users. The software engineers will use the SRS to fully understand the expectations of this VCS to construct the appropriate software. End users will be able to use this SRS as a “test” to see if the software engineers will be constructing the system to their expectations. If it is not to their expectations the end users can specify how it is not to their liking and the software engineers will change the SRS to fit the end users’ needs. Furthermore, this document can be used by clients and stakeholders as a representation of their requirements for the software. The clear understanding of the VCS and its’ functionality will allow for the correct software to be developed for the end user and will be used for the development of the future stages of the project.</p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-3"></a>SRS-3</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>1.2 Scope</h2>
+            <div class="htmlContent"><p>We live in a modern world in which we have a very powerful tool that enables us to have an upgrade in every level and sector of society: technology. Amongst all the other things, the educational process is more optimized, more effective, and most importantly, more powerful. Creating a "Video-conference system" is essential for all the educational institutions, creating better stability and continuity in every possible challenge that the world and society will have, allowing unlimited access of the necessary material to the students, but in the same time, creating new opportunities and freedom to the teaching staff for organizing the lecture, having more ways of displaying, explanation and clarification. Fulfilling all the requirements of the SRS will be in essence fulfilling the contract with the client.</p><p>Videoconference System (VCS) will be designed for the "Faculty of Computer Science and Engineering" (FINKI) which is a part of the "Ss. Cyril and Methodius" University whose headquarters in Skopje. It already uses moodle system (courses) as a support tool for the learning process. The Faculty recognizes the importance of this system, because it provides a platform where the teaching materials are published to the students, and also the system provides opportunity for making examination of the students through the system. FINKI uses CAS (Central Authentication Service) system where the users (professors, assistants, students and the other staff members) may login in order to use some of the systems of the Faculty.</p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-4"></a>SRS-4</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>1.3 Definitions, Acronyms and Abbreviations</h2>
+            <div class="htmlContent"><table><tbody><tr><td><p><em>Abbreviation</em></p></td><td><p><em>Definition</em></p></td></tr><tr><td><p><strong>SRS</strong></p></td><td><p>Software Requirements Specification</p></td></tr><tr><td><p><strong>User</strong></p></td><td><p>Any person who uses the system, with the general case being students ages 18-24, and, teaching staff including professors, assistants, dean's office and guests (researchers, scientists)</p></td></tr><tr><td><p><strong>UML</strong></p></td><td><p>Unified Modeling Language</p></td></tr><tr><td><p><strong>OS</strong></p></td><td><p>Operating system</p></td></tr><tr><td><p><strong>GUEST USERS</strong></p></td><td><p>Researchers, scientists, and all sorts of teaching staff all over the world</p></td></tr><tr><td><p><strong>FINKI</strong></p></td><td><p>Faculty of Computer Science and Engineering</p></td></tr><tr><td><p><strong>VCS</strong></p></td><td><p>Video-Conference System</p></td></tr><tr><td><p><strong>Unauthorized user</strong></p></td><td><p>Every user that is not in the defined user groups is unauthorized user. Therefore, it is absolutely forbidden for this kind of a user to use VCS.</p></td></tr></tbody></table></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-14"></a>SRS-14</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>1.4 References</h2>
+            <div class="htmlContent"><ul><li>Documentations during development process and specification process:<ol><li>Brainstorming session document</li><li>Triage and prioritization document</li><li>Interview reference document</li><li>Elicitation document</li></ol></li><li>The general team website is located at http://www.psptech.com/</li><li>The tool used for UML Based Diagrams, Context Diagrams and Use Cases is located at <a href="http://staruml.io/"><em>http://staruml.io/</em></a></li><li>Document created and structured based on standard <strong><em>IEEE Std</em></strong><em>&nbsp;830-1998</em></li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-15"></a>SRS-15</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>1.5 Overview</h2>
+            <div class="htmlContent"><p>Section 2 contains a more in-depth and complete definition of the requirements of the VCS software. This section is intended for the client and other stakeholders who may or may not be familiar with the actual software engineering process. This section contains little to no technical information regarding the software process necessary to transform this document into an actual piece of software and is instead targeted towards non-software engineering subjects. Section 3 contains all the technical requirements for the software, including a full list of functional and non-functional requirements. This section is intended to be used by the PSP Tech software developers in order to create the actual software. The majority of information contained in this section is very technical and field-specific in nature, and thus is not intended to be read or understand by anyone outside of the software engineering field.</p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-20"></a>SRS-20</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:10px">
+            <h1>2 Overall Description</h1>
+            <div class="htmlContent"></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-21"></a>SRS-21</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>2.1 Product Perspective</h2>
+            <div class="htmlContent"><p>The VCS is independent and self-contained. VCS will be a new system that will provide an online teaching, presentations, and communication with lots of tools to cover the needs of both, the students, and the teaching staff. The following context diagrams illustrates the external entities and system interfaces. VCS will enable students to enter the video conferences very easy, with only clicking on a link that leads to it, and, without further authentication other than the moodle system which is already in use. Teaching staff will be able to create and close sessions and conferences, control the actions of the other users, and with that have the needed administrative rights. Only the teaching staff and students at FINKI are going to use this system and all of its capabilities. Also any other side guest that has the permission to use the system, can use it.</p><p>Side guests of the system will have the obligation to register onto the moodle system (as a side guest) in order to fulfill the need of authentication, since that is very important role to the VCS initial design and use.</p><p>The system is expected to evolve in the future, ultimately allowing for complete streamlining of the education process, and eventually improve that domain for the whole country, the other universities, primary and high schools included.</p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-22"></a>SRS-22</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>2.2 Product Functions</h2>
+            <div class="htmlContent"><p>1.1 Context diagram for Video Conference System.</p><p><em> (Included in the SRS PDF file)</em></p><p></p><p><strong>Note</strong>: Students, Teaching Staff, and Side Guests are all the users of the system and have access to all User actions in addition to their own specialized actions. System Administrators have access to all actions within the system in addition to their own specialized actions.</p><p></p><p><strong>All the Users of the system have the following User actions:</strong></p><p><strong> </strong></p><ul><li>Demo – An option available to all users (registered or not) introducing the application and highlighting the main feature of the product.</li><li>Tutorial – An option available to the registered users allowing to familiarize with the features of the application; the tutorial session will provide for a mock session to be performed by the user (without the score being stored in the record). Pop-up messages will help the user familiarize with the program.</li><li>Type of participant – Pop up message for the user to decide whether he will be a user of a type: listener, or user of a type: participant (with microphone or camera on).</li><li>Recorded Lecture Review – An option allowing the registered user to review his/her score from the video learning sessions, under a condition that administrator had allowed that. There isn’t a maximum number of available recorded sessions.</li><li>Settings – An option allowing the user to modify the settings for the video learning session such as the level of audio, quality of the video, whether to be visible or not.</li><li>Surveys and questionnaires participants</li><li>Exit – User exits the conference, and update his status for the administrator to note</li></ul><p><strong> </strong></p><p><strong> </strong></p><p>Side guests have the following User actions:</p><p><strong> </strong></p><ul><li>Register – The user must register once in order to get access to the application. After registering, a unique username and password will be provided and will allow the logging in of the registered user.</li><li>Log-in – A registered user has to enter his/her unique user name/password combination in order to access the application.</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-23"></a>SRS-23</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>2.3 User characteristics</h2>
+            <div class="htmlContent"><p><em>There are 5 main user roles:</em></p><p></p><ul><li>Teaching staff (Professors, Assistants, Demonstrators)</li></ul><p>- The teaching staff have the purpose to create teaching sessions, explain the lecture using various methods that are implemented and to communicate with the students and get their feedback. Also to communicate with researchers and scientists from around the world.</p><p></p><ul><li>Student</li></ul><p>- The students are responsible for attending at a given teaching session and to communicate with the professor. Such as asking questions about the lecture, giving their opinion, answering professor’s questions, interacting with other students. Their main goal is to understand the new lecture.</p><p></p><ul><li>Side guests (Researchers, Scientists)</li></ul><p>- The side guests are responsible for attending at a meeting with professors from the faculty. Their goal is to be interactive during the meeting, to share their knowledge and to give their opinion.</p><p></p><ul><li>System administrator</li></ul><p>- The system administrator seeks to ensure that the uptime, performance, resources and security of the servers they manage meet the needs of the users.</p><p></p><ul><li>Developers</li></ul><p>- Developers are the people who make this software become a reality. They spend time and knowledge to develop this software</p><p></p><p><em>Technical expertise:&nbsp;</em></p><p></p><ul><li>All users need to have average technical expertise, knowledge if the basic software interface design templates, in order to be able to use all of the system functionalities</li></ul><p></p><ul><li>All of the users need to be in sync with material that is being handed over by the teaching staff</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-24"></a>SRS-24</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>2.4 Constraints</h2>
+            <div class="htmlContent"><ul><li>Platform:</li></ul><p></p><ol><li>Must work on Macintosh Operating System</li><li>Must work on Windows Operating System</li><li>Must work on Linux Operating System</li><li>Must work on Android Operating System</li><li>Must work on Mozilla Firefox Browser</li><li>Must work on Microsoft Edge Browser</li><li>Must work on Google Chrome Browser</li><li>Must work on Opera Browser</li></ol><p></p><ul><li>Hardware:</li></ul><p></p><ol><li>The computer must have an audio output system and speakers or headphones o at least 128 MB of RAM</li><li>Minimum 800x600 screen resolution with 256 colors</li><li>For PC: must have at least Windows 98 or above</li></ol></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-25"></a>SRS-25</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>2.5 Asumptions and Dependencies</h2>
+            <div class="htmlContent"><ol><li><strong>Assumptions</strong><ol><li>The device with which the VCS is being used needs to have Internet Connection: WIFI, VLAN, Ethernet or any other type that provides the ability for the user to connect with the corresponding server domain.</li><li>The users meet all the characteristics outlined in [2.3]</li><li>The users are at least going to have 2.0 Mbps Download speed and 2.3 Mbps Upload speed.</li><li>Limited lecture sessions per day.</li></ol></li><li><strong>Dependencies &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong><strong>- </strong>The end user’s system meets all the constraints listed in [2.3]</li></ol></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-29"></a>SRS-29</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:10px">
+            <h1>3 Specific Requirements</h1>
+            <div class="htmlContent"><p><em>This section contains all the software requirements in sufficient detail, which enables designers to design a system which satisfies those requirements and enable testers to verify said requirements.</em></p><table><tbody><tr><td></td><td></td><td><p></p></td></tr></tbody></table><p></p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-32"></a>SRS-32</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>3.1 External Interfaces</h2>
+            <div class="htmlContent"></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-36"></a>SRS-36</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:30px">
+            <h3>3.1.1 Domain Model</h3>
+            <div class="htmlContent"><p>FINKI recognizes the need for Videoconference System (VCS) that would provide opportunity to overcome the issues like attending online meetings and conferences with researchers and scientists all over the world, and even more importantly, continue serving the students with the required services while the classrooms can't work properly for whatever reason. That being said, the System needs to provide opportunities for giving lectures online, as well as having consultation hours with the students.</p><p>1.1 Class diagram for the interaction between the main stakeholders in the system</p><p><em>(Included in the PDF SRS Document)</em></p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-34"></a>SRS-34</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:30px">
+            <h3>3.1.2 Detailed description of all inputs and outputs</h3>
+            <div class="htmlContent"><p><em>The external interfaces include the retention of students’ data from the &nbsp;<strong>iKnow&nbsp;</strong>system. This includes the following:</em></p><ul><li>First name</li><li>Last name</li><li>Index number (must contain six digits)</li><li>Current semester (can be winter semester or summer semester)</li><li>Current academic year</li><li>Currently taken courses (can be 5 or 6)</li><li>The student’s current assigned professors</li></ul><p><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</em></p><p><em>The external interfaces for the videoconference system also use the standard input and output devices for a personal computer:</em></p><ul><li>Keyboard</li><li>Mouse</li><li>Monitor</li><li>Camera</li><li>Microphone</li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p><em>The window formats and organization describes the features of the &nbsp; software’s windows. This includes:</em></p><p></p><p>Login window</p><ul><li>Log into the system as an Administrator, Student or Guest</li></ul><p>Dashboard</p><ul><li>Browse the available videoconferences</li><li>Join a videoconference</li><li>Create a videoconference (Administrator only)</li><li>Delete an existing videoconference (Administrator only)</li></ul><p>Videoconference window</p><ul><li>Type in the public chat</li><li>Turn camera on/off</li><li>Turn microphone on/off</li><li>View attending users</li><li>Screen-share (Administrator only)</li><li>Draw on the screen (Administrator only)</li><li>Create polls (Administrator only)</li><li>Change slide (Administrator only)</li><li>Start/stop recording (Administrator only)</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-38"></a>SRS-38</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>3.2 Functions</h2>
+            <div class="htmlContent"><p><em>The functional requirements describe the service that the software must offer.</em></p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-47"></a>SRS-47</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:30px">
+            <h3>3.2.1 Requirments Table</h3>
+            <div class="htmlContent"><p><strong>Requirement priorities:</strong></p><ul><li>Priority 1 – Essential and required functionality</li><li>Priority 2 – Desirable functionality</li><li>Priority 3 – Extra features</li></ul><p>&nbsp;</p><table><tbody><tr><td><p><strong>Requirement ID</strong></p></td><td><p><strong>Requirement statement</strong></p></td><td><p><strong>Priority level</strong></p></td></tr><tr><td><p>&nbsp;</p><p>RID001</p></td><td><p>&nbsp;</p><p>The system shall be implemented on a server in the central</p><p>Macedonia region in order to reduce latency.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>RID002</p></td><td><p>&nbsp;</p><p>The system shall provide three types of user accounts:</p><p>&nbsp;</p><p>RID002.1 – Students.</p><p>&nbsp;</p><p>RID002.2 – Administrators (Professors, Staff).</p><p>&nbsp;</p><p>RID002.3 – Guest users.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID003</p></td><td><p>&nbsp;</p><p>The system shall not allow the users to create multiple accounts.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID004</p></td><td><p>The system shall provide a privacy policy for each user account.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>RID005</p></td><td><p>&nbsp;</p><p>The system shall provide three different user interfaces:</p><p>&nbsp;</p><p>RID005.1 – Students.</p><p>&nbsp;</p><p>RID005.2 – Administrators.</p><p>&nbsp;</p><p>RID005.3 - Guest users.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>RID006</p></td><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>The system shall provide three different conference types:</p><p>&nbsp;</p><p>RID006.1 – Lectures.</p><p>&nbsp;</p><p>RID006.2 – Office hours.</p><p>&nbsp;</p><p>RID006.3 – Meetings.</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>RID007</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator user to download the list of users who were present during the conference.</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>&nbsp; &nbsp; &nbsp; RID007.1 The list shall contain the:</p><p>&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RID007.1.1 Date of the conference.</p><p>&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RID007.1.2 Name of the conference.</p><p>&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RID007.1.3 First Name of the user.</p><p>&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RID007.1.4 Last Name of the user.</p><p>&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RID007.1.5 User Index number.</p><p>&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RID007.1.6 The amount of minutes spent in the conference.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID008</p></td><td><p>&nbsp;</p><p>The system shall allow the option to show or hide the sidebar with the list of present users during the conference.</p><p>&nbsp;</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>&nbsp;</p><p>Priority 2</p></td></tr><tr><td><p>&nbsp;</p><p>RID009</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the users to use the public chat during the conference.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID010</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow every user the option to turn on/off their camera during the conference.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID011</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow every user the option to turn on/off their microphone during the conference.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID012</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator the option to revoke any user's microphone privileges during the conference.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID013</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator the option to revoke any user's camera privileges during the conference.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>RID014</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator the option to share their screen during the conference.</p><p>&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RID014.1 - The system shall allow the &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Administrator to choose which window to share &nbsp; during the conference.</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID015</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator user the option to kick users during the conference.</p><p>&nbsp;</p></td><td><p>Priority 2</p></td></tr><tr><td><p>&nbsp;</p><p>&nbsp;</p><p>RID016</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator to create breakout rooms during the conference.</p><p>&nbsp;</p><p>&nbsp;</p></td><td><p>Priority 2</p></td></tr><tr><td><p>&nbsp;</p><p>RID017</p><p>&nbsp;</p></td><td><p>The system shall allow the Administrator to create polls during the conference.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID018</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator to lock the public chat during the conference.</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID019</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Students the option to ask a question during the conference.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID020</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow users to private message any other user during the conference.</p><p>&nbsp;</p></td><td><p>Priority 2</p></td></tr><tr><td><p>&nbsp;</p><p>RID021</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Student the option to share their screen during office-hours conferences.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID022</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the user the option to view the conference in full-screen mode.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID023</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator the option to record the conference.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID024</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the users to view recorded conferences.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID025</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall not allow the users the option to download the recorded conferences.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>&nbsp;</p><p>RID026</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>&nbsp;</p><p>The system shall store every non recorded conference on the server for 14 days.</p><p>&nbsp;</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID027</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow the Administrator to access every conference on the server.</p><p>&nbsp;</p></td><td><p>Priority 1</p></td></tr><tr><td><p>&nbsp;</p><p>RID028</p><p>&nbsp;</p></td><td><p>&nbsp;</p><p>The system shall allow maximum of 250 users during a conference.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RID028.1 The system shall allow only users that follow the subject at that particular professor to attend</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></td><td><p>Priority 2</p></td></tr><tr><td><p>RID029</p></td><td><p>The system shall not allow the user to participate in more than one conference at a time.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID030</p></td><td><p>The system shall receive data from iKnow.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID031</p></td><td><p>The system shall receive data from Courses.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID032</p></td><td><p>The system shall upload data to Courses.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID033</p></td><td><p>The system shall be able to process 50 sessions at once.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID034</p></td><td><p>The CPU usage shall be less than 70% in standard workload.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID035</p></td><td><p>The system shall allow a user to login within 2 seconds.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID036</p></td><td><p>The system shall have response time of 0.1 seconds.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID037</p></td><td><p>The system defect rate shall be less than 1 failure per 1000 hours of operation.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID038</p></td><td><p>The system shall meet or exceed 99.99% uptime.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID039</p></td><td><p>The system shall not be unavailable more than 30 minutes per 100 hours of work.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID040</p></td><td><p>Less than 10 seconds shall be needed to restart the system after a failure 90% of the time.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID041</p></td><td><p>The system shall be available 99.9% of the time.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID042</p></td><td><p>The system shall identify all of its users before allowing them to use its capabilities.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID043</p></td><td><p>The system shall recognize 99.9% of the unauthorized users within 2 seconds.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID044</p></td><td><p>The system shall report unauthorized users.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID045</p></td><td><p>The system shall be 99.99% secure.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID046</p></td><td><p>The satisfaction level of the system shall be “very satisfied” for at least 70% of the users after 1 month usage period.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID047</p></td><td><p>The system shall enable novice users to perform task “Join Session” in less than 1 minute.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID048</p></td><td><p>Installation of a new version shall leave all database contents unchanged.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID049</p></td><td><p>Every class shall not exceed 200 lines of code.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID050</p></td><td><p>The estimated loss of data in case of a disk crash shall be less than 0.10%.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID051</p></td><td><p>The system shall meet all internet privacy laws.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID052</p></td><td><p>The system shall meet all the internet standards.</p></td><td><p>Priority 1</p></td></tr><tr><td><p>RID053</p></td><td><p>The system shall provide safety mechanism against offensive verbal language.</p></td><td><p>Priority 2</p></td></tr><tr><td><p>RID054</p></td><td><p>The system shall provide tools for drawing, sketching, changing and pointing on the screen.</p></td><td><p>Priority 2</p></td></tr><tr><td><p>RID055</p></td><td><p>The system shall allow the Administrator to allow the students to create sessions for communication purposes</p></td><td><p>Priority 1</p></td></tr></tbody></table></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-39"></a>SRS-39</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:30px">
+            <h3>3.2.2 State Machine Model</h3>
+            <div class="htmlContent"><p><em>A state machine model for the videoconference software, represented as a UML diagram.</em></p><p></p><p><em>(Included in the PDF SRS Documentation)</em></p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-40"></a>SRS-40</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:30px">
+            <h3>3.2.3 Constraints</h3>
+            <div class="htmlContent"></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-41"></a>SRS-41</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:40px">
+            <h4>3.2.3.1 Software contraints</h4>
+            <div class="htmlContent"><ul><li>Web browser</li><li>All camera, sound and microphone drivers must be installed and be up-to-date</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-42"></a>SRS-42</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:40px">
+            <h4>3.2.3.2 Hardware constraints</h4>
+            <div class="htmlContent"><ul><li>Microphone and camera</li><li>Keyboard and mouse</li><li>Monitor or other video display device</li><li>Internet connection</li><li>1.5GHz processor</li><li>Speakers or other audio device</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-43"></a>SRS-43</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>3.3 Performance Requirements</h2>
+            <div class="htmlContent"><ul><li>The software shall allow no more than 250 users during a conference.</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-44"></a>SRS-44</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>3.4 Quality Attributes</h2>
+            <div class="htmlContent"><ul><li>The software shall connect with the Moodle online platform.</li><li>The software can be used on a web browser that supports HTML5 (Google Chrome is recommended).</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-45"></a>SRS-45</td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="description-col" style="padding-left:20px">
+            <h2>3.5 Object Oriented Models</h2>
+            <div class="htmlContent"><p><em>(All diagrams included in the PDF Documentation)</em></p></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+        <tr>
+          <td class="id-col"><a id="SRS-30"></a>SRS-30</td>
+          <td class="custom-col htmlContent">Section</td>
+                      <td class="description-col" style="padding-left:10px">
+            <h1>4 Validation</h1>
+            <div class="htmlContent"><p></p><p><strong>Validation method used:</strong></p><ul><li>Validation meeting</li><li>Software Testing</li><li>Questionnaire</li></ul><p><strong>&nbsp;</strong></p><p>- &nbsp; Validation meeting with one of the professors from the university was arranged, and some of the user requirements, functional and non-functional for the software have been changed. They are listed down below. &nbsp;The rest of the document had stayed in It’s initial specification and elicitation state.</p><p>&nbsp;</p><ul><li>Functional requirements inserted<ul><li>RID053</li><li>RID054</li><li>RID055</li></ul></li></ul><p><strong>&nbsp;</strong></p><p><strong>- &nbsp;</strong>Also 5 questionnaires arranged with simple 5 questions, with students and professors were made respectively, which, with the answered questions, they confirmed the requirements defined in the document. Questionnaires were used as a tool because It’s a very cheap way of gathering a lot of necessary information from a lot of stakeholders.</p><p>&nbsp;</p><p>- &nbsp; The questionnaire with the students had this format (the bold sentences are the most frequent answers):</p><p>&nbsp;</p><p>&nbsp;</p><p>1. &nbsp; How important is the account privacy to you?</p><p>&nbsp;</p><ul><li>Very Important</li><li>Important</li><li>Not so important</li><li>It means nothing to me</li></ul><p>2. Do you usually have many questions for the teaching staff during office hours?</p><ul><li>Yes</li><li>No</li></ul><p>&nbsp;</p><p>3. &nbsp;How often do you use the moodle system?</p><ul><li>Very often</li><li>Often</li><li>Rarely</li><li>I don’t usually use it</li></ul><p>&nbsp;</p><p>4. &nbsp; How important is the design for the GUI to you?</p><p>&nbsp;</p><ul><li>Very Important</li><li>Important</li><li>Not so important</li><li>It means nothing to me</li></ul><p>&nbsp;</p><p>5. &nbsp; On what Browser and Operating System do you work?</p><p>&nbsp;</p><ul><li>Google Chrome, Windows</li><li>Mozila Firefox, Windows</li><li>Google Chrome, Linux</li><li>Mozila Firefox, Linux</li><li>Other</li></ul><p>&nbsp;</p><p>&nbsp;</p><p>- &nbsp; The questionnaire with the teaching staff (professors and assistants) had this format (the bold sentences are the most frequent answers):</p><p>&nbsp;</p><p>1. &nbsp; How important is the account privacy to you?</p><ul><li>Very Important</li><li>Important</li><li>Not so important</li><li>It means nothing to me</li></ul><p>2. Do you usually have a lot of traffic during office hours?</p><ul><li>Yes</li><li>No</li></ul><p>3. &nbsp;How often do you use the moodle system?</p><ul><li>Very often</li><li>Often</li><li>Rarely</li><li>I don’t usually use it</li></ul><p>4. &nbsp; How important is the design for the GUI to you?</p><ul><li>Very Important</li><li>Important</li><li>Not so important</li><li>It means nothing to me</li></ul><p>5. &nbsp; On what Browser and Operating System do you work?</p><ul><li>Google Chrome, Windows</li><li>Mozila Firefox, Windows</li><li>Google Chrome, Linux</li><li>Mozila Firefox, Linux</li><li>Other</li></ul><p></p><p>- &nbsp;A group of software testers – PSPS Testing, was rented in order to make sure the right product was being in a sufficient and fast way, making sure that every detail of the requirements was met.</p><p>Software testing proved the following information:</p><ul><li>The system has error rate of 0.01% of the time</li><li>The system works 99.4% of the time under bigger traffic, 99.9% of time under lower traffic of users</li><li>The system meets all modern design templates for the GUI</li><li>All the security mechanisms work 98% of the cases.</li><li>The Integrability and Portability rate with the operating systems, browsers and software have 99.3% success rate</li><li>The system has the average of 0.3s of response time with low traffic, and 0.6s response time with high traffic</li><li>They system has 10 years mean time to failure</li></ul></div>
+          </td>
+          <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                      <td class="custom-col htmlContent"></td>
+                    </tr>
+      </tbody>
+    </table>
+    <hr>
+    <div class="pull-right"><em>Last modified by <a href="mailto://nikoikiko999@gmail.com">Nikola Stanojkovski, PSP Tech</a> on 2020-05-26 00:50</em></div>
+  </div>
+</body>
